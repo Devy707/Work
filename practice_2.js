@@ -16,8 +16,7 @@ let personMovieDB = {
     privat: false,
 };
 
-
-
+/*--------------------РЕЩЕНИЕ ЗАДАЧИ ЧЕРЕЗ ЦИКЛ FOR--------------------*/
 for (let i = 0; i < 2; i++) {
     const firstQuestion = prompt('Один из последних просмотренных фильмов?', ''),
         secondQuestion = prompt('На сколько оцените его?', '');
@@ -33,6 +32,26 @@ for (let i = 0; i < 2; i++) {
     }
 
 }
+/*--------------------РЕЩЕНИЕ ЗАДАЧИ ЧЕРЕЗ ЦИКЛ FOR--------------------*/
+
+
+/*--------------------РЕЩЕНИЕ ЗАДАЧИ ЧЕРЕЗ ЦИКЛ WHILE--------------------*/
+// let k = 0;
+// while (k < 2) {
+//     const firstQuestion = prompt('Один из последних просмотренных фильмов?', ''),
+//         secondQuestion = prompt('На сколько оцените его?', '');
+//     k++;
+//     if (firstQuestion != null && secondQuestion != null && firstQuestion != '' &&
+//         secondQuestion != '' && firstQuestion.length < 50) {
+
+//         personMovieDB.movies[firstQuestion] = secondQuestion;
+//         console.log('DONE');
+//     } else {
+//         console.log('ERROR');
+//         k--;
+//     }
+// }
+/*--------------------РЕЩЕНИЕ ЗАДАЧИ ЧЕРЕЗ ЦИКЛ WHILE--------------------*/
 
 if (personMovieDB.count < 10) {
     console.log('Мало');
