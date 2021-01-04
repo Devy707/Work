@@ -60,4 +60,3 @@ if (personMovieDB.count < 10) {
 } else {
     console.log('Очень много');
 }
-console.log(personMovieDB);
