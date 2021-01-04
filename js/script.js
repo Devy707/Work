@@ -1,4 +1,13 @@
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
+"use strict";
+let numberOfFilms;
+for (let i = 0; i < 1; i++) {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    if (isNaN(numberOfFilms) != true && numberOfFilms != '' && numberOfFilms != null) {
+        break;
+    } else {
+        i--;
+    }
+}
 let personMovieDB = {
     count: numberOfFilms,
     movies: {},
@@ -6,10 +15,21 @@ let personMovieDB = {
     genres: [],
     privat: false,
 };
-const firstQuestion = prompt('Один из последних просмотренных фильмов?',''),
-      secondQuestion = prompt('На сколько оцените его?',''),
-      thirdQuestion = prompt('Один из последних просмотренных фильмов?',''),
-      fourthQuestion = prompt('На сколько оцените его?','');
-personMovieDB.movies[firstQuestion] = secondQuestion;
-personMovieDB.movies[thirdQuestion] = fourthQuestion;
+
+
+for (let i = 0; i < 2; i++) {
+    const firstQuestion = prompt('Один из последних просмотренных фильмов?', ''),
+        secondQuestion = prompt('На сколько оцените его?', '');
+
+    if (firstQuestion != null && secondQuestion != null && firstQuestion != '' &&
+        secondQuestion != '' && firstQuestion.length < 50) {
+
+        personMovieDB.movies[firstQuestion] = secondQuestion;
+        console.log('DONE');
+    } else {
+        console.log('ERROR');
+        i--;
+    }
+
+}
 console.log(personMovieDB);
