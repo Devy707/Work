@@ -151,3 +151,5 @@ const john = Object.create(soldier);
 john.sayHello();
 // john.__proto__ = soldier;
 // Object.setPrototypeOf(john, soldier);
+// --------------------------------------------------------------------------------------
+//                                                  DOM(Document Object Module)
